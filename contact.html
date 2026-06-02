@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Blogify</title>
+    <!-- Boxicons Icon Library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Single Consolidated Stylesheet -->
+     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class='bx bxs-zap'></i>
+                <span class="logo-text">Blogify</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown"><a href="blog.html" class="nav-link dropdown-toggle">
+                        Categories
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Programming</a></li>
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." class="search-input">
+                    <button class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+                <button class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="contact-section">
+        <span class="section-label">GET IN TOUCH</span>
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">Have a question or want to collaborate? We'd love to hear from you!</p>
+
+        <div class="contact-grid">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Subject</label>
+                    <input type="text" class="form-input" placeholder="What is this about?" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-textarea" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon"><i class='bx bxs-envelope'></i></div>
+                    <div class="info-title">Email</div>
+                    <div class="info-text">hello@blogify.com</div>
+                    <div class="info-text">support@blogify.com</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class='bx bxs-map'></i></div>
+                    <div class="info-title">Location</div>
+                    <div class="info-text">UpperHill,Nairobi</div>
+                    <div class="info-text">Kenya</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class='bx bxs-chat'></i></div>
+                    <div class="info-title">Follow Us</div>
+                    <div class="social-icons">
+                        <div class="social-icon"><i class='bx bxl-twitter'></i></div>
+                        <div class="social-icon"><i class='bx bxl-linkedin'></i></div>
+                        <div class="social-icon"><i class='bx bxl-github'></i></div>
+                        <div class="social-icon"><i class='bx bxl-instagram'></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion" id="faq-accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How often do you publish new articles?</span>
+                        <span class="accordion-icon"><i class='bx bx-down-arrow-circle'></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">We publish 2-3 new articles per week on various topics related to technology, design, and productivity. Subscribe to get notified of new content!</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I contribute to Blogify?</span>
+                        <span class="accordion-icon"><i class='bx bx-down-arrow-circle'></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Absolutely! We welcome guest contributors. Please reach out to us at writers@blogify.com with your ideas and we'll work with you to get your content published.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Do you accept sponsorships?</span>
+                        <span class="accordion-icon"><i class='bx bx-down-arrow-circle'></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Yes, we do! We have several sponsorship packages available. Please contact our partnerships team at sponsors@blogify.com for more information.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What's your privacy policy?</span>
+                        <span class="accordion-icon"><i class='bx bx-down-arrow-circle'></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Your privacy is important to us. We never share your email or personal information with third parties. Read our full privacy policy for more details.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class='bx bxs-zap'></i>
+                    <span class="logo-text">Blogify</span>
+                </div>
+                <p class="footer-desc">
+                  Explore a world of fresh perspectives, expert insights, and captivating stories. Blogify brings together knowledge, creativity, and meaningful conversations that inspire growth and curiosity.
+                </p>
+                <div class="footer-social-handles">
+                      <div class="social-icon"><i class='bx bxl-twitter'></i></div>
+                    <div class="social-icon"><i class='bx bxl-linkedin'></i></div>
+                        <div class="social-icon"><i class='bx bxl-github'></i></div>
+                        <div class="social-icon"><i class='bx bxl-instagram'></i></div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Write for Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blogify. All rights reserved.Crafted by Abivic9-Ops</p>
+            <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
