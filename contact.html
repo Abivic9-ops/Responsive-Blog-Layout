@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Blogify</title>
+    <title>Contact Page | Blogify</title>
     <!-- Boxicons Icon Library -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Single Consolidated Stylesheet -->
@@ -41,7 +41,7 @@
                         <li><a href="#">Cybersecurity</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="about.html" class="nav-link ">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="navbar-right">
@@ -202,7 +202,28 @@
         </div>
     </footer>
 
+    <script>
+        // Contact form handling
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                this.reset();
+            });
+        }
 
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.closest('.accordion-item');
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script src="blogify.js"></script>
 </body>
 
 </html>
