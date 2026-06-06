@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Blogify </title>
+    <!-- Boxicons Icon Library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Single Consolidated Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class='bx bxs-zap'></i>
+                <span class="logo-text">Blogify</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown"><a href="blog.html" class="nav-link dropdown-toggle">
+                        Categories
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Programming</a></li>
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="nav-link ">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." class="search-input">
+                    <button class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+                <button class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="main-wrapper">
+        <main class="main-content">
+            <!-- Page Header -->
+            <section class="hero-section">
+                <span class="section-label">EXPLORE</span>
+                <h1 class="hero-title">All Articles</h1>
+                <p class="hero-subtitle">Discover stories, insights, and knowledge across all categories.</p>
+            </section>
+
+            <!-- Featured Articles Grid -->
+            <section class="featured-articles" id="articles-container">
+                <!-- Article Card 1 -->
+                <article class="article-card featured">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Article">
+                    </div>
+                    <div class="article-content">
+                        <span class="category-tag technology">TECHNOLOGY</span>
+                        <h2 class="article-title">10 Productivity Tips for Developers</h2>
+                        <p class="article-excerpt">Boost your coding productivity with these proven tips and habits used by top developers around the world.</p>
+                        <div class="article-meta">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" alt="Author" class="author-avatar">
+                            <div class="meta-info">
+                                <span class="author-name">Alex Morgan</span>
+                                <span class="article-date">May 18, 2025</span>
+                            </div>
+                        </div>
+                        <div class="article-footer">
+                            <span class="read-time"><i class='bx bx-time'></i> 5 min read</span>
+                            <a href="article.html" class="read-more">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card featured">
+                    <div class="article-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad2'%3E%3Cstop offset='0%25' style='stop-color:%2346A29D;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2384B8A0;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EDesign%3C/text%3E%3C/svg%3E" alt="Article">
+                    </div>
+                    <div class="article-content">
+                        <span class="category-tag design">DESIGN</span>
+                        <h2 class="article-title">The Future of UI/UX Design</h2>
+                        <p class="article-excerpt">Explore the latest UI/UX design trends and how they are shaping the digital experiences.</p>
+                        <div class="article-meta">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%2346A29D'/%3E%3C/svg%3E" alt="Author" class="author-avatar">
+                            <div class="meta-info">
+                                <span class="author-name">Sarah Johnson</span>
+                                <span class="article-date">May 15, 2025</span>
+                            </div>
+                        </div>
+                        <div class="article-footer">
+                            <span class="read-time"><i class='bx bx-time'></i> 7 min read</span>
+                            <a href="article.html" class="read-more">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card featured">
+                    <div class="article-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad3'%3E%3Cstop offset='0%25' style='stop-color:%23E67E22;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23D35400;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ELifestyle%3C/text%3E%3C/svg%3E" alt="Article">
+                    </div>
+                    <div class="article-content">
+                        <span class="category-tag lifestyle">LIFESTYLE</span>
+                        <h2 class="article-title">How to Stay Inspired Every Day</h2>
+                        <p class="article-excerpt">Simple daily habits that can help you stay motivated, creative, and inspired in all areas.</p>
+                        <div class="article-meta">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23E67E22'/%3E%3C/svg%3E" alt="Author" class="author-avatar">
+                            <div class="meta-info">
+                                <span class="author-name">James Carter</span>
+                                <span class="article-date">May 12, 2025</span>
+                            </div>
+                        </div>
+                        <div class="article-footer">
+                            <span class="read-time"><i class='bx bx-time'></i> 4 min read</span>
+                            <a href="article.html" class="read-more">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card featured">
+                    <div class="article-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad4'%3E%3Cstop offset='0%25' style='stop-color:%239B59B6;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23AF7AC5;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad4)'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EProductivity%3C/text%3E%3C/svg%3E" alt="Article">
+                    </div>
+                    <div class="article-content">
+                        <span class="category-tag productivity">PRODUCTIVITY</span>
+                        <h2 class="article-title">Building Better Daily Habits</h2>
+                        <p class="article-excerpt">Learn scientifically-backed methods to build habits that actually stick and transform your life.</p>
+                        <div class="article-meta">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%239B59B6'/%3E%3C/svg%3E" alt="Author" class="author-avatar">
+                            <div class="meta-info">
+                                <span class="author-name">Emma Wilson</span>
+                                <span class="article-date">May 10, 2025</span>
+                            </div>
+                        </div>
+                        <div class="article-footer">
+                            <span class="read-time"><i class='bx bx-time'></i> 6 min read</span>
+                            <a href="article.html" class="read-more">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Pagination -->
+            <!-- <div class="pagination">
+                <button class="page-btn"><i class='bx bx-chevron-left'></i> Prev</button>
+                <button class="page-btn active">Page 1</button>
+                <a href="blog-page-2.html"><button class="page-btn">Page 2</button></a>
+                <a href="blog-page-3.html"><button class="page-btn">Page 3</button></a>
+                <span class="page-dots">...</span>
+                <button class="page-btn">Page 10</button>
+                <a href="blog-page-2.html"><button class="page-btn next">Next <i class='bx bx-chevron-right'></i></button></a>
+            </div> -->
+        
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Categories Card -->
+            <div class="sidebar-card categories-card">
+                <span class="sidebar-label">FILTER BY CATEGORY</span>
+                <ul class="categories-list">
+                    <li class="category-item">
+                        <span class="category-icon"> <i class='bx bxl-html5'></i> </span>
+                        <span class="category-name">Technology</span>
+                        <span class="category-count">24</span>
+                    </li>
+                    <li class="category-item">
+                        <span class="category-icon"><i class='bx bxl-dribbble'></i></span>
+                        <span class="category-name">Design</span>
+                        <span class="category-count">18</span>
+                    </li>
+                    <li class="category-item">
+                        <span class="category-icon">    <i class='bx bxs-heart'></i></span>
+                        <span class="category-name">Lifestyle</span>
+                        <span class="category-count">15</span>
+                    </li>
+                    <li class="category-item">
+                        <span class="category-icon"><i class='bx bxs-cog'></i></span>
+                        <span class="category-name">Productivity</span>
+                        <span class="category-count">12</span>
+                    </li>
+                    <li class="category-item">
+                        <span class="category-icon"><i class='bx bxs-briefcase'></i></span>
+                        <span class="category-name">Business</span>
+                        <span class="category-count">9</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Trending Articles -->
+            <div class="sidebar-card popular-card">
+                <span class="sidebar-label">TRENDING NOW</span>
+                <ul class="popular-list">
+                    <li class="popular-item">
+                        <div class="popular-thumbnail">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='60'%3E%3Crect width='80' height='60' fill='%236B5B95'/%3E%3C/svg%3E" alt="Article">
+                        </div>
+                        <div class="popular-info">
+                            <h4 class="popular-title">VS Code Pro Tips</h4>
+                            <span class="popular-date">May 10, 2025</span>
+                        </div>
+                    </li>
+                    <li class="popular-item">
+                        <div class="popular-thumbnail">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='60'%3E%3Crect width='80' height='60' fill='%2346A29D'/%3E%3C/svg%3E" alt="Article">
+                        </div>
+                        <div class="popular-info">
+                            <h4 class="popular-title">Web Design Trends</h4>
+                            <span class="popular-date">May 8, 2025</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class='bx bxs-zap'></i>
+                    <span class="logo-text">Blogify</span>
+                </div>
+                <p class="footer-desc">
+                    Explore a world of fresh perspectives, expert insights, and captivating stories. Blogify brings
+                    together knowledge, creativity, and meaningful conversations that inspire growth and curiosity.
+                </p>
+                <div class="footer-social-handles">
+                    <div class="social-icon"><i class='bx bxl-twitter'></i></div>
+                    <div class="social-icon"><i class='bx bxl-linkedin'></i></div>
+                    <div class="social-icon"><i class='bx bxl-github'></i></div>
+                    <div class="social-icon"><i class='bx bxl-instagram'></i></div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Write for Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blogify. All rights reserved.Crafted by Abivic9-Ops</p>
+            <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i
+                    class='bx bx-up-arrow-alt'></i></button>
+        </div>
+    </footer>
+
+
+    <script src="blogify.js"></script>
+</body>
+
+</html>
