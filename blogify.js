@@ -235,3 +235,114 @@ if (darkModeToggle) {
         darkModeToggle.innerHTML = '<i class="bx bx-sun"></i>';
     }
 }
+
+// CONTACT FORM HANDLING
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! We\'ll get back to you soon.');
+        this.reset();
+    });
+}
+
+// FAQ ACCORDION FUNCTIONALITY
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+        const item = this.closest('.accordion-item');
+        item.classList.toggle('active');
+    });
+});
+
+// NEWSLETTER SUBSCRIPTION
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for subscribing! You will receive our latest updates soon.');
+        this.reset();
+    });
+}
+
+// EXPANDABLE CONTENT (READ MORE DETAILS)
+const expandBtns = document.querySelectorAll('.expand-btn');
+expandBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const content = this.nextElementSibling; // the .expandable-content div
+        if (content.style.display === 'block' || content.classList.contains('show')) {
+            content.style.display = 'none';
+            content.classList.remove('show');
+            this.textContent = 'Read More Details';
+            this.classList.remove('expanded');
+            this.classList.add('collapsed');
+        } else {
+            content.style.display = 'block';
+            content.classList.add('show');
+            this.textContent = 'Hide Details';
+            this.classList.remove('collapsed');
+            this.classList.add('expanded');
+        }
+    });
+});
+
+// SEARCH BAR FUNCTIONALITY MOCK
+const searchBtns = document.querySelectorAll('.search-btn');
+const searchInputs = document.querySelectorAll('.search-input');
+
+searchBtns.forEach((btn, index) => {
+    const input = searchInputs[index];
+    if (btn && input) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const query = input.value.trim();
+            if (query) {
+                alert(`Searching for: "${query}"...`);
+                input.value = '';
+            }
+        });
+        
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                btn.click();
+            }
+        });
+    }
+});
+
+// PAGINATION INTERACTIVITY
+const paginationBtns = document.querySelectorAll('.page-btn');
+paginationBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        if (!this.classList.contains('active') && !this.classList.contains('next') && !this.textContent.includes('Prev') && !this.parentElement.tagName.toLowerCase() === 'a') {
+            const siblings = this.parentElement.querySelectorAll('.page-btn');
+            siblings.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
+
+// BACK TO TOP BUTTON
+const backToTopBtn = document.getElementById('back-to-top');
+
+if (backToTopBtn) {
+    // Initial state
+    backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+

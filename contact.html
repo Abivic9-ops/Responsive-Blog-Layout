@@ -202,27 +202,6 @@
         </div>
     </footer>
 
-    <script>
-        // Contact form handling
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! We\'ll get back to you soon.');
-                this.reset();
-            });
-        }
-
-        // Accordion functionality
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-        accordionHeaders.forEach(header => {
-            header.addEventListener('click', function() {
-                const item = this.closest('.accordion-item');
-                item.classList.toggle('active');
-            });
-        });
-    </script>
-
     <script src="blogify.js"></script>
 </body>
 
