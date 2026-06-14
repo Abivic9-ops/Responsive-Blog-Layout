@@ -162,6 +162,8 @@ a:hover {
     position: relative;
     transition: var(--transition-smooth);
     padding-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link::after {
